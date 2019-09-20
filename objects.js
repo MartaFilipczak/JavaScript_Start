@@ -8,7 +8,7 @@ myCar.driver = "Marta";
 
 myCar.drive = function(){ console.log("now driving");};
 
-myCar.drive();
+myCar.drive(); //We call the method here by using ();
 
 // Na skroty jak ponizej
 
