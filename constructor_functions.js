@@ -1,7 +1,17 @@
-var Car = function(maxSpeed, driver){
+var Car = function(predk, driver){
 
-    this.maxSpeed = maxSpeed;
+    this.maxSpeed = predk * 2;
     this.driver = driver;
+    this.kolor = "czarny";
+
+    this.jakiJestKolorAuta = function() {
+        console.log("kolor auta " + this.driver + " to: " + this.kolor);
+    };
+
+    this.przemalujAuto = function(nakolor) {
+        this.kolor = nakolor;
+    };
+
     this.drive = function(speed, time){
         console.log(speed * time);
     };
@@ -16,5 +26,7 @@ var myCar2 = new Car(40, "New Boris");
 var myCar3 = new Car(50, "James Dean");
 var myCar4 = new Car(95, "Tilda");
 
-myCar.driver(30,5);
-myCar3.dlogDriver();
+myCar.drive(30,5);
+myCar3.logDriver();
+myCar3.jakiJestKolorAuta();
+myCar3.przemalujAuto("bialy");
